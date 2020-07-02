@@ -15,7 +15,7 @@
 ## :bookmark: Sobre
 
 <strong>Pokedex</strong> É uma aplicação web que se comunica com uma api publica baseada nos jogos/anime pokemon, nela você pode pesquisar o pokemon e ver seu status,
-<strong><a href="https://ice-pokedex.netlify.app/" target="_blank">Teste o preview aqui.</a></strong>
+<strong><a href="https://ice-pokedex.netlify.app/" target="_blank">Teste o site aqui.</a></strong>
 
 <a id="como-usar"></a>
 ## :computer: Como Usar
