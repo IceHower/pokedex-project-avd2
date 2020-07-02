@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         e.preventDefault();
         console.log(searchPoke);
         try {
-        await api.get(`/${searchPoke}`);
+        await api.get(`/${searchPoke.toLowerCase()}`);
         } catch(err) {
         return toast.error('Por favor inserir o nome de um pokemon', {
                 position: "top-center",
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
             });
         }
         
-        history.push(`/pokemon/${searchPoke}`)
+        history.push(`/pokemon/${searchPoke.toLowerCase()}`)
     }
     async function loadPokemons() {
         await api.get(curPage).then(response => {
