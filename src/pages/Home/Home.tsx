@@ -1,6 +1,6 @@
 
 import React, {FormEvent, useState, useEffect} from 'react';
-import Header from '../../Components/Header';
+import Header from '../../Components/header/Header';
 import Footer from '../../Components/footer/Footer';
 import api from '../../services/api';
 import IPokemon  from '../../services/interfaces'

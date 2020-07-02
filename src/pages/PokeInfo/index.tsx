@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../Components/Header';
+import Header from '../../Components/header/Header';
 import { useRouteMatch, Link } from 'react-router-dom';
 import api from '../../services/api';
 import IPokemon  from '../../services/interfaces';

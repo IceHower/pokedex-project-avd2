@@ -1,5 +1,5 @@
 import React from 'react'
-import headerBG from '../assets/headerbackground.png';
+import headerBG from '../../assets/headerbackground.png';
 import HeaderStyle from './styles'
 
 const Header: React.FC = () => {
