@@ -19,7 +19,7 @@
 
 <a id="como-usar"></a>
 ## :computer: Como Usar
-Clone o projeto em uma pasta no seu computador, abra o terminal e execute "yarn" ou "npm install" para poder instalar as dependencias, logo em seguida só digitar no terminal "yarn start" e se divertir :smile:
+Clone o projeto em uma pasta no seu computador, abra o terminal e execute "yarn" ou "npm install" para poder instalar as dependencias, logo em seguida só digitar no terminal "yarn start" ou "npm start" e se divertir :smile:
 
 <a id="techs-usadas"></a>
 
