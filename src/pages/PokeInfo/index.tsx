@@ -4,7 +4,7 @@ import { useRouteMatch, Link } from 'react-router-dom';
 import api from '../../services/api';
 import IPokemon  from '../../services/interfaces';
 import {FiArrowLeft} from 'react-icons/fi';
-import PokeCard from './styles';
+import PokeCard, { Loading } from './styles';
 import Footer from '../../Components/footer/Footer'
 
 interface PokemonParams {
@@ -15,18 +15,28 @@ const PokeInfo: React.FC = () => {
   const [pokemon, setPokemon] = useState<IPokemon | null>(null);
   console.log(pokemon);
   const { params } = useRouteMatch<PokemonParams>();
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
+    setLoading(true);
     async function loadData(): Promise<void> {
       const response = (await api.get(`/${params.name}`)).data;
       setPokemon(response);
-      console.log(pokemon);
+      setLoading(false);
     }
-    console.log(pokemon?.weight);
     loadData();
   }, [params.name]);
-
+    if(loading === true) {
+      return (
+      <>
+        <Header/>
+          <PokeCard>
+            <Loading/>
+          </PokeCard>
+          <Footer/>
+      </>); 
+    }
     return (
         <>
         <Header/>
