@@ -17,7 +17,7 @@ const Home: React.FC = () => {
     const [pokemons, setPokemon] = useState<IPokemon[]>([]);
     const [curPage, setCurPage] = useState('');
     const [nextPage, setNextPage] = useState('');
-    const [prevPage, setPrevPage] = useState('');
+    const [prevPage, setPrevPage] = useState<string|null>('');
 
 
     async function filterPokes(e: FormEvent<HTMLFormElement>) {
@@ -54,8 +54,9 @@ const Home: React.FC = () => {
         await api.get(curPage).then(response => {
             setPokemon(response.data.results);
             setNextPage(response.data.next);
-            setPrevPage(response.data.prev);
+            setPrevPage(response.data.previous);
             console.log(response.data.results);
+            console.log(prevPage);
         })
       }
     function NextPage() {
